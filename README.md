@@ -1,5 +1,5 @@
 # PsDiscountsBot
-Source code for telegram bot, that can parse discounted games from PlayStation Store and post this games to telegram channel.
+Source code of Telegram bot, that can parse discounted games from PlayStation Store and post this games to Telegram channel.
 
 ![logo](https://github.com/GreyLabsDev/PsDiscountsBot/blob/master/playstation_bot_logo.png)
 
