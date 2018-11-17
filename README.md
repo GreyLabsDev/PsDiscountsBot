@@ -4,7 +4,7 @@ Source code for telegram bot, that can parse discounted games from PlayStation S
 ![logo](https://github.com/GreyLabsDev/PsDiscountsBot/blob/master/playstation_bot_logo.png)
 
 ## Main features
-- Parsing game discounts page of PlayStation Store (package datasource)
+- Parsing all available PlayStation Store pages with discounted games (package datasource)
 - Writing discounted games into .json file by special data model (package models)
 - Updating discounted games in .json file every day in defined time of day (packages taskmanager, telegram)
 - Auto-posting of discounted games to any telegram channel (packages taskmanager, telegram)
