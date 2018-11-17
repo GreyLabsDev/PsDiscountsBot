@@ -27,7 +27,7 @@ var TESTING_CHANNEL_NAME = "@testingChannelName"
 var TESTING_CHANNEL_CHAT_ID int64 = -77777777777
 
 var CHANNEL_PS_NAME = "@productionChannelName"
-var CHANNEL_CHAT_ID int64 = -77777777777
+var CHANNEL_PS_CHAT_ID int64 = -77777777777
 
 var POSTING_START_HOUR = 10
 var POSTING_END_HOUR = 19
@@ -140,7 +140,7 @@ func BotServerProcess(inKey string, controlChannel chan string) {
 			msgString += "\nСсылка: " + somePost.GameURL
 			msgMain := tgbotapi.NewMessageToChannel(CHANNEL_PS_NAME, msgString)
 			file.DownloadImage(somePost.GameCoverURL, "cover_ps.jpg", func() {
-				msgCover := tgbotapi.NewPhotoUpload(CHANNEL_CHAT_ID, "cover_ps.jpg")
+				msgCover := tgbotapi.NewPhotoUpload(CHANNEL_PS_CHAT_ID, "cover_ps.jpg")
 				bot.Send(msgCover)
 				bot.Send(msgMain)
 			})
@@ -167,7 +167,7 @@ func GetPsPostingPeriodicTask(taskControlChannel chan string) taskmanager.Single
 				msgMain := tgbotapi.NewMessageToChannel(CHANNEL_PS_NAME, msgString)
 				if somePost.HeaderTitle != "" {
 					file.DownloadImage(somePost.GameCoverURL, "cover_ps.jpg", func() {
-						msgCover := tgbotapi.NewPhotoUpload(CHANNEL_CHAT_ID, "cover_ps.jpg")
+						msgCover := tgbotapi.NewPhotoUpload(CHANNEL_PS_CHAT_ID, "cover_ps.jpg")
 						bot.Send(msgCover)
 						bot.Send(msgMain)
 					})
@@ -203,7 +203,7 @@ func GetPsPostGameBundleTask(bundleSize int) taskmanager.SingleTask {
 		bot.Send(msgBundleHeader)
 		for index, message := range postMessages {
 			msgMain := tgbotapi.NewMessageToChannel(CHANNEL_PS_NAME, message)
-			msgCover := tgbotapi.NewPhotoUpload(CHANNEL_CHAT_ID, uploadedCovers[index])
+			msgCover := tgbotapi.NewPhotoUpload(CHANNEL_PS_CHAT_ID, uploadedCovers[index])
 			bot.Send(msgCover)
 			bot.Send(msgMain)
 		}
