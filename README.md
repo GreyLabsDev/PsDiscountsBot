@@ -9,7 +9,7 @@ Source code of Telegram bot, that can parse discounted games from PlayStation St
 - Updating discounted games in .json file every day in defined time of day (packages taskmanager, telegram)
 - Auto-posting of discounted games to any telegram channel (packages taskmanager, telegram)
 - Manual posting control by special commands to bot (package telegram)
-- Fully autonomus, all features scheduled with tasmanager package and executes at defined time every day
+- Fully autonomus, all features scheduled with tasmkanager package and executes at defined time every day
 
 ### Used technologies
 * [go-telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) - Golang bindings for the Telegram Bot API
